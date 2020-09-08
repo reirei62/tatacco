@@ -33,10 +33,11 @@ Things you may want to cover:
 | email         |string|null: false|
 | password      |string|null: false|
 | birth         |date  |null: false|
-| tatacco_id    |string|null: false|
+
 
 ###Association
 - has_many :introductions
+- has_one :board
 
 ## introductions テーブル
 
@@ -50,3 +51,17 @@ Things you may want to cover:
 
 ###Association
 - belongs_to :user
+- belongs_to :board
+
+
+## boards　テーブル
+
+| Column     | Type    |   Options    |
+|------------|---------|--------------|
+| user       |references|null: false, foreign_key: true  |
+| introductions|references|null: false, foreign_key: true|
+|tatacco_id    |string|null: false|
+
+###Association
+- belongs_to :user
+- has_many :introductions
