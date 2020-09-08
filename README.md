@@ -44,6 +44,7 @@ Things you may want to cover:
 | Column     | Type   |  Options   |
 |------------|--------|------------|
 | user       |references|null: false, foreign_key: true |
+| board      |references|null: false, foreign_key: true |
 | content    |text    | null: false|
 | category_id   |integer | null: false|
 | permission  |boolean | |
@@ -59,7 +60,6 @@ Things you may want to cover:
 | Column     | Type    |   Options    |
 |------------|---------|--------------|
 | user       |references|null: false, foreign_key: true  |
-| introductions|references|null: false, foreign_key: true|
 |tatacco_id    |string|null: false|
 
 ###Association
