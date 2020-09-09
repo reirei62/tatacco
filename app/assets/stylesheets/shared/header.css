@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.all-page-header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size:36px;
+
+}
+.title-character{
+  font-family: 'Corben', cursive;
+  color:#fc848c;
+  text-shadow:0.5px 0.5px 0 #a83c44, -0.5px -0.5px 0 #a83c44,
+              -0.5px 0.5px 0 #a83c44, 0.5px -0.5px 0 #a83c44,
+              0px 0.5px 0 #a83c44,  0 -0.5px 0 #a83c44,
+            -0.5px 0 0 #a83c44, 0.5px 0 0 #a83c44;
+}
+
+.title-icon {
+  width:36px;
+  height:36px;
+  margin-top: 10px;
+}
+.introduction-list{
+  margin-top:30px;
+  color:#fc848c;
+  
+}
+
+.sign-in-list {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color:#fc848c;
+}
+
+.sign-up {
+  text-decoration: none;
+  color:#fc848c;
+}
