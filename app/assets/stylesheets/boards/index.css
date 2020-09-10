@@ -1,0 +1,41 @@
+.board{
+  background-color:#fc848c;
+  height:95vh;
+}
+.name{
+  color:#ffffff;
+  font-family: "Nico Moji";
+  font-size:36px;
+}
+
+.introduction-content{
+  text-decoration: none;
+    padding: 0.5rem;
+    background: #ffffff;
+    border-left: solid 6px #fbb5bc;
+    color: #1a1818;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+    margin:15px;
+    width:40%;
+}
+
+.write-btn{
+  width: 120px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 30%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    padding: 15px;
+}
+
+
+.fa-pencil-alt{
+  color:#fc848c;
+}
+.write-btn-text{
+  font-size:15px;
+  color:#fc848c;
+  font-weight:bold;
+}
