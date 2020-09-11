@@ -64,3 +64,6 @@ Things you may want to cover:
 ###Association
 - belongs_to :user
 - has_many :introductions
+
+# 要件定義
+https://docs.google.com/spreadsheets/d/1cjaxvRLaT750uWZraD51afs8aEI-rprZ30EzXG9wCAk/edit?usp=sharing
