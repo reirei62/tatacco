@@ -6,13 +6,13 @@
      <%= image_tag "t.png", class:"title-icon" %>
   </div>
     <%if user_signed_in? %>
-      <%= link_to '他己紹介ボードを作成する', boards_path, method: :post, class: "introduction-list" %>
+      <%= link_to '他己紹介ボードを作成する','#', method: :post, class: "introduction-list" %>
     <%end%>
 
       
     <ul class='sign-in-list'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %> </li>
+        <li><%= link_to current_user.nickname, board_path(current_user), class: "user-nickname" %> </li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
       <% else%>
         <li><%= link_to 'ログイン', '#', class: "login" %></li>
