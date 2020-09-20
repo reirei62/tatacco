@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2020_09_10_065936) do
   end
 
   create_table "introductions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user", null: false
-    t.bigint "board", null: false
+    t.bigint "users_id", null: false
+    t.bigint "boards_id", null: false
     t.text "content", null: false
     t.integer "category_id", null: false
     t.boolean "permission"
