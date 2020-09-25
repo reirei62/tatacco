@@ -1,0 +1,23 @@
+.first-introduction{
+display:flex;
+}
+.permission-button{
+  color:#ffffff;
+  text-decoration: none;
+  margin-left:15px;
+  border-radius: 3px;
+  border:1px solid #333333
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color:blue;
+}
+.introducer-name{
+  text-align: end;
+  
+}
+.under-line{
+  border-bottom:2px dashed #fc848c;
+}

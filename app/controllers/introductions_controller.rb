@@ -6,13 +6,26 @@ class IntroductionsController < ApplicationController
   end
 
   def create
-    binding.pry
     @introduction=Introduction.new(introduction_params)
     if @introduction.save!
-      redirect_to board_path(:board_id)
+      redirect_to board_path(id: params[:board_id])
     else
       
     end
+  end
+
+  def destroy
+    @introduction=Introduction.find(params[:board_id])
+    @introduction.destroy
+    redirect_to board_path(id: @introduction.boards_id)
+  end
+
+
+  def change
+    @introduction=Introduction.find(params[:board_id])
+    @introduction.permission = true
+    @introduction.save
+    redirect_to board_path(id: @introduction.boards_id)
   end
 
 

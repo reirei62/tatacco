@@ -16,7 +16,8 @@ class BoardsController < ApplicationController
   def show
     @user=User.find(params[:id])
     @board=Board.where(users_id: @user.id)
-    @introductions=Introduction.where(boards_id: @board.id)
+    @introductions=Introduction.where(boards_id: @board[0][:id],permission: true)
+    @new_introductions=Introduction.where(boards_id: @board[0][:id],permission: false)
   end
 
  

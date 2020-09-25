@@ -3,16 +3,67 @@
     <div class="name">
       <%= @user.nickname %>さんってどんなひと？
     </div>
+     <%count=0%>
     <%#紹介文一覧表示%>
-    <%#@introduction.each do |intro|%>
-      <div>
-      
+    <% if @user==current_user%>
+    <!--自身のページに飛んだ時-->
+      <p class="sentence">届いた新規紹介文</p>
+      <%@new_introductions.each do |intro|%>
+        <div class="introduction-content">
+          <div class="first-introduction">
+            <%= intro.content%>
+              <%= link_to '公開',  change_board_introductions_path(@new_introductions[count][:id]), class:'permission-button blue' %>
+              <%= link_to '削除', board_introduction_path(@new_introductions[count][:id]), method: :delete, class:'permission-button red' %>
+          </div>
+          <div class="introducer-name">
+            <span class="under-line">紹介者
+              <%= intro.category.name%>の
+              <% user=User.find(intro.users_id)%>
+              <%=user.nickname%>
+            </span>
+          </div>
+        </div>
+        <%count+=1%>
+      <% end%>
+      <p class="sentence">公開されている紹介文</p>
+      <%@introductions.each do |intro|%>
+        <div class="introduction-content">
+          <%= intro.content%>
+          <div class="introducer-name">
+            <span class="under-line">紹介者
+              <%= intro.category.name%>の
+              <% user=User.find(intro.users_id)%>
+              <%=user.nickname%>
+            </span>
+          </div>
+        </div>
+      <% end%>
+    <%else%>
+    <!--自身以外のマイページに飛んだ時-->
+      <%@introductions.each do |intro|%>
+        <div class="introduction-content">
+          <%= intro.content%>
+          <!--紹介文を作成した本人のみに削除の表示-->
+          <% if @introductions[count][:users_id] == current_user.id%>
+              <%= link_to '削除', board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' %>
+          <% end%>
+          <div class="introducer-name">
+            <span class="under-line">紹介者
+              <%= intro.category.name%>の
+              <% user=User.find(intro.users_id)%>
+              <%=user.nickname%>
+            </span>
+          </div>
+        </div>
+        <%count+=1%>
+      <% end%>
+    <% end%>
+    <!--ダミーテキスト-->
+    <% if @introductions.nil? && @user == current_user%>
+      <div class="introduction-content">
+          １人目の紹介者になりましょう！！
       </div>
-    <%# end%>
-
-    <div class="introduction-content">
-        １人目の紹介者になりましょう！！
-    </div>
+    <% end%>
     <% unless @user==current_user%>
       <div class='write-btn'>
         <%= link_to '紹介文を書く', new_board_introduction_path(board_id: @board[0][:id]),class: 'write-btn-link' %>
