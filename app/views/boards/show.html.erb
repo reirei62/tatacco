@@ -4,10 +4,13 @@
       <%= @user.nickname %>さんってどんなひと？
     </div>
      <%count=0%>
+      <% if @new_introductions.empty?%>
+      <%else%>
+        <p class="sentence">届いた新規紹介文</p>
+      <% end %>
     <%#紹介文一覧表示%>
     <% if @user==current_user%>
     <!--自身のページに飛んだ時-->
-      <p class="sentence">届いた新規紹介文</p>
       <%@new_introductions.each do |intro|%>
         <div class="introduction-content">
           <div class="first-introduction">
@@ -49,7 +52,7 @@
           <% end%>
           <div class="introducer-name">
             <span class="under-line">紹介者
-              <%= intro.category.name%>の
+              <%= intro.category.name%>
               <% user=User.find(intro.users_id)%>
               <%=user.nickname%>
             </span>
@@ -59,8 +62,9 @@
       <% end%>
     <% end%>
     <!--ダミーテキスト-->
-    <% if @introductions.nil? && @user == current_user%>
+    <% if @introductions.empty? && @user != current_user%>
       <div class="introduction-content">
+          まだ紹介文はありません。<br>
           １人目の紹介者になりましょう！！
       </div>
     <% end%>
@@ -71,5 +75,4 @@
         </i>
       </div>
     <% end %>
-
 </div>

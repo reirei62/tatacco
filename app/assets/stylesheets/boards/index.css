@@ -1,7 +1,12 @@
-
+.wrapper{
+  background-color:#fc848c;
+  color:#FCE3E5;
+  height:calc(100% - 60px);
+  min-height: 100vh;
+}
 .slogan-wrapper{
   font-size:52px;
-  
+  margin-bottom:40px;
 }
 .app-title{
   font-family: 'Corben', cursive;
@@ -9,11 +14,11 @@
 .slogan{
   font-family: "M PLUS 1p";
   font-weight:bold;
+  margin-left: 20%;
 }
-.second-slogan{
-  font-family: "M PLUS 1p";
-  font-weight:bold;
-  margin-left: 15%;
+.second{
+  
+  padding-left: 15%;
 }
 
 .how-to-wrapper{
@@ -60,22 +65,26 @@
 .start{
   font-size:48px;
   margin-top:40px;
-  padding-bottom:40px;
+  padding-bottom:60px;
   text-align:center;
   font-family: "Nico Moji", "M PLUS 1p";
-  font-weight: bold;
 
 }
-.button{
-  border-bottom:5px solid #333333;
-  border-right:4px solid #333333;
+.start h3{
+  padding-bottom: 20px;
+}
+.start-button{
+  padding:10px;
+  text-shadow: -1px -1px 1px #4b4343;
+  border-bottom:5px solid #8c67c4;
+  border-right:4px solid #8c67c4;
   text-decoration: none;
-  background-color: #fce3e5;
-  color: #333333;
-  border-radius: 5px;
+  background-color: #b684ff;
+  color: #fce3e5;
+  border-radius: 25px;
   position: relative;
 }
-.button:hover{
+.start-button:hover{
   border:0px;
   top:5px;
 }

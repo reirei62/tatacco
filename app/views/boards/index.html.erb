@@ -2,10 +2,15 @@
 <div class="wrapper">
   <div class="slogan-wrapper">
     <h2 class="slogan">人を知ろう、自分を知ろう</h2>
-    <h2 class="second-slogan">他己紹介アプリ
+    <h2 class="second slogan">他己紹介アプリ
     <span class="app-title">Taqoo</span>
     </h2>
   </div>
+    <h3 class="sells-point">自分の良いところは自分が一番知っている。<br>
+                            それは本当ですか？<br>
+                            自分を他の人に紹介してもらって自分をもっと知ろう。知ってもらおう。<br>
+                            大事な人を紹介してその人の良いところをもっと知ってもらおう。<br>
+                            みんなが少し嬉しい気持ちになれるアプリ。</h3>
   <div class="how-to-wrapper">
     <ul class="how-to">
       <h3 class="center-sentence">How to Use</h3>
@@ -33,9 +38,9 @@
   <div class="start">
     <h3>-さっそくはじめよう！-</h3>
     <% if user_signed_in?%>
-      <%= link_to 'マイボードをつくる', boards_path, method: :post, class: "link button" %>
+      <%= link_to 'マイボードをつくる', boards_path, method: :post, class: "start-button" %>
     <% else %>
-      <%= link_to '新規登録', new_user_registration_path, class: "link button" %>
+      <%= link_to '新規登録', new_user_registration_path, method: :post,class: "start-button" %>
     <% end %>
   </div>
 <div>

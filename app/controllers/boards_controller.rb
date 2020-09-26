@@ -7,9 +7,9 @@ class BoardsController < ApplicationController
   def create
     @board=Board.new(users_id: current_user.id )
     if @board.save
-      redirect_to board_path
+      redirect_to board_path(id: @board.users_id)
     else
-      redirect_to root_path
+      redirect_to board_path(id: current_user.id)
     end
   end
 
