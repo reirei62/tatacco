@@ -1,0 +1,22 @@
+
+
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-pink-btn {
+  width: 100%;
+  background: #fc848c;
+  border: 1px solid #fc848c;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: #fc848c;
+}

@@ -61,3 +61,8 @@ gem 'devise'
  #画像アップロード機能
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+gem 'active_hash'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end

@@ -3,9 +3,11 @@
 }
 
 .all-page-header {
+  height:60px;
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  background-color:#FCE3E5;
 }
 
 .title {
@@ -45,14 +47,14 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
   font-weight: bold;
+  color:#fc848c;
 }
 
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color:#fc848c;
 }
 
 .login {

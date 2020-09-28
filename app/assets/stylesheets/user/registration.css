@@ -1,8 +1,9 @@
 .registration-main {
   width: 100%;
   min-width: 800px;
+  min-height: 100vh;
   height: 100%;
-  background-color: #fbb5bc;
+  background-color: #fc848c;
   display: flex;
   justify-content: center;
 }
@@ -19,7 +20,7 @@
   height: 120px;
   text-align: center;
   font-size: 26px;
-  color:#fbb5bc;
+  color:#fc848c;
 }
 
 .form-header-text {
@@ -44,7 +45,7 @@
 
 .form-text {
   font-size: 20px;
-  color:#fbb5bc;
+  color:#fc848c;
   font-weight: bold;
 }
 
@@ -78,7 +79,7 @@
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
-  color:#fbb5bc
+  color:#fc848c;
 }
 
 .input-birth-wrap>select {
