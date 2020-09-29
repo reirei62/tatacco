@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "3.14.1"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -37,7 +37,7 @@ lock "~> 3.14.1"
 
 
 # Capistranoのログの表示に利用する
-set :application, 'taqoo'
+set :application, 'tatacco'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:reirei62/tatacco.git'
