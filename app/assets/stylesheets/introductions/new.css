@@ -12,10 +12,7 @@
 .intro-text{
   width:70%;
 }
-.sentence{
-  color:#fce3e5;
-  font-size:24px;
-}
+
 .create-btn{
       background: #fff;
       border: 1px solid #fff;
@@ -25,4 +22,25 @@
       font-size: 24px;
       margin-top: 4vw;
       border-radius: 5px;
+}
+
+.create-btn:hover{
+  background-color: #cdb9bb;
+}
+@media (max-width:1024px){
+  .header-intro{
+    font-size:28px;
+  }
+  .intro-text{
+    width:80%;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width:599px){
+  .header-intro{
+    font-size:20px;
+  }
+
 }

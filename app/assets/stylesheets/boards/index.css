@@ -4,21 +4,28 @@
   height:calc(100% - 60px);
   min-height: 100vh;
 }
-.slogan-wrapper{
-  font-size:52px;
-  margin-bottom:40px;
+.sentence{
+  color:#fce3e5;
+  font-size:24px;
+  width:100%;
 }
-.app-title{
-  font-family: 'Corben', cursive;
-}
-.slogan{
+.sub-title{
+  position: absolute;
+  font-size:24px;
+  top:20px;
+  left:42%;
   font-family: "M PLUS 1p";
-  font-weight:bold;
-  margin-left: 20%;
 }
-.second{
-  
-  padding-left: 15%;
+.main-title{
+  font-family:'Corben', cursive;
+  font-size: 80px;
+  text-align: center;
+  position: relative;
+}
+.taqoo{
+  padding:0px 20px;
+  border-top: solid 3px #fce3e5;/*上線*/
+  border-bottom: solid 3px #fce3e5;
 }
 
 .how-to-wrapper{
@@ -56,6 +63,7 @@
   font-family: "M PLUS 1p";
   font-size:28px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .sells-icon{
   width:36px;
@@ -87,4 +95,92 @@
 .start-button:hover{
   border:0px;
   top:5px;
+}
+@media (max-width:1024px){
+  
+  .sub-title{
+    font-size:20px;
+    top:10px;
+    left:43%;
+  }
+  .main-title{
+    font-size: 60px;
+  }
+  .how-to-wrapper{
+    margin-top:20px;
+  }
+  .how-to{
+    font-size: 28px;
+  }
+  .how-to-list{
+    width:70%;
+    margin-left:15%;
+  }
+  
+  .mark{
+    margin-left: 49%;
+  }
+  .sells-wrapper{
+    margin-top:15px;
+  }
+  .sells-point{
+    font-size:20px;
+  }
+  .sells-icon{
+    width:24px;
+    height:24px;
+  }
+  
+  .start{
+    font-size:40px;
+    margin-top:30px;
+    padding-bottom:30px;
+  }
+
+}
+
+@media (max-width:599px){
+  .sentence{
+    font-size:18px;
+  }
+  .sub-title{
+    font-size:16px;
+    top:7px;
+    left:37%;
+  }
+  .main-title{
+    font-size: 46px;
+  }
+  
+  
+  .how-to-wrapper{
+    margin-top:15px;
+  }
+  .how-to{
+    font-size: 18px;
+  }
+  .how-to-list{
+    width:70%;
+    margin-left:15%;
+  }
+  
+  .mark{
+    margin-left: 49%;
+  }
+  .sells-wrapper{
+    margin-top:15px;
+  }
+  .sells-point{
+    font-size:14px;
+  }
+  .sells-icon{
+    width:24px;
+    height:24px;
+  }
+  
+  .start{
+    font-size:24px;
+    margin-top:20px;
+    padding-bottom:30px;
+  }
 }

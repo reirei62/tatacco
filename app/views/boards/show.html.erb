@@ -10,13 +10,20 @@
       <% end %>
     <%#紹介文一覧表示%>
     <% if @user==current_user%>
+    <div class=introductions-wrapper>
     <!--自身のページに飛んだ時-->
       <%@new_introductions.each do |intro|%>
         <div class="introduction-content">
           <div class="first-introduction">
-            <%= intro.content%>
-              <%= link_to '公開',  change_board_introductions_path(@new_introductions[count][:id]), class:'permission-button blue' %>
-              <%= link_to '削除', board_introduction_path(@new_introductions[count][:id]), method: :delete, class:'permission-button red' %>
+              <div class="content">
+                <%= intro.content%>
+              </div>
+              <%= link_to  change_board_introductions_path(@new_introductions[count][:id]), class:'permission-button blue' do%>
+                <i class="fas fa-unlock-alt">公開</i>
+              <% end%>
+              <%= link_to  board_introduction_path(@new_introductions[count][:id]), method: :delete, class:'permission-button red' do%>
+                <i class="fas fa-trash-alt">削除</i>
+              <% end %>
           </div>
           <div class="introducer-name">
             <span class="under-line">紹介者
@@ -31,7 +38,9 @@
       <p class="sentence">公開されている紹介文</p>
       <%@introductions.each do |intro|%>
         <div class="introduction-content">
-          <%= intro.content%>
+          <div class="content">
+                <%= intro.content%>
+              </div>
           <div class="introducer-name">
             <span class="under-line">紹介者
               <%= intro.category.name%>の
@@ -41,14 +50,18 @@
           </div>
         </div>
       <% end%>
+      </div>
     <%else%>
     <!--自身以外のマイページに飛んだ時-->
+      <div class="introductions-wrapper">
       <%@introductions.each do |intro|%>
         <div class="introduction-content">
           <%= intro.content%>
           <!--紹介文を作成した本人のみに削除の表示-->
           <% if @introductions[count][:users_id] == current_user.id%>
-              <%= link_to '削除', board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' %>
+              <%= link_to board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' do%>
+                <i class="fas fa-trash-alt">削除</i>
+              <% end%>
           <% end%>
           <div class="introducer-name">
             <span class="under-line">紹介者
@@ -60,6 +73,7 @@
         </div>
         <%count+=1%>
       <% end%>
+      </div>
     <% end%>
     <!--ダミーテキスト-->
     <% if @introductions.empty? && @user != current_user%>
@@ -69,10 +83,10 @@
       </div>
     <% end%>
     <% unless @user==current_user%>
-      <div class='write-btn'>
-        <%= link_to '紹介文を書く', new_board_introduction_path(board_id: @board[0][:id]),class: 'write-btn-link' %>
+        <%= link_to new_board_introduction_path(board_id: @board[0][:id]),class: 'write-btn' do %>
+        <p >紹介文を作成</p>
         <i class="fas fa-pencil-alt fa-4x">
         </i>
-      </div>
+        <% end %>
     <% end %>
 </div>

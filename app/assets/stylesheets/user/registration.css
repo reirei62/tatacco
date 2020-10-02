@@ -1,6 +1,5 @@
 .registration-main {
   width: 100%;
-  min-width: 800px;
   min-height: 100vh;
   height: 100%;
   background-color: #fc848c;
@@ -135,4 +134,23 @@
   color: #0099e8;
   text-align: right;
   cursor: pointer;
+}
+
+@media (max-width:1024px){
+
+  .form-wrap {
+    width: 80%;
+    }
+}
+
+@media (max-width:599px){
+  .form-wrap{
+    width:80%;
+  }
+  .form-text {
+    font-size: 15px;
+  }
+  .info-text {
+    font-size: 12px;
+  }
 }
