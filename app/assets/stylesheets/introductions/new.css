@@ -11,6 +11,16 @@
 }
 .intro-text{
   width:70%;
+  height:170px;
+}
+.count{
+  color:#fce3e5;
+  font-size: 20px;
+  text-align: right;
+  padding-right:15%;
+}
+.relation{
+  margin-top: 20px;
 }
 
 .create-btn{
@@ -33,7 +43,11 @@
   }
   .intro-text{
     width:80%;
-    margin-bottom: 20px;
+  }
+
+  .count{
+    font-size: 20px;
+    padding-right:10%;
   }
 
 }
@@ -41,6 +55,9 @@
 @media (max-width:599px){
   .header-intro{
     font-size:20px;
+  }
+  .count{
+    font-size:14px;
   }
 
 }

@@ -3,6 +3,9 @@
     <%= form_with model: @introduction, local: true,url: board_introductions_path(@board.id) do |f| %>
   <p class="sentence">エピソード</p>
         <%= f.text_area :content, class:"intro-text", id:"intro-text", placeholder:"例：仕事をいつもやさしく教えてくれる（必須 100文字まで)", maxlength:"100" %>
+        <div class="count">
+          文字数:<span id="count">0字</span>
+        </div>
       <div class="relation">
         <span class="sentence">関係性（相手から見て）</span>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "選択してください"}, {class:"select-box", id:"relation-category"}) %>
