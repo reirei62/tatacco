@@ -1,5 +1,5 @@
 
-.name{
+.profile{
   color:#FCE3E5;
   font-family: "Nico Moji";
   font-size:36px;
@@ -10,6 +10,18 @@
 .introductions-wrapper{
   display: flex;
   flex-wrap: wrap;
+}
+.copyto{
+  border: solid 1px #FCE3E5;
+  padding:5px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.button{
+  background-color: #FCE3E5;
+  border-radius: 5px;
+  font-size:14px;
+  cursor: pointer;
 }
 
 .introduction-content{
@@ -70,8 +82,13 @@
   }
 
 @media (max-width:1024px){
-  .name{
-    font-size:32px;
+  .profile{
+    font-size:24px;
+  }
+  .copyto{
+    margin:10px;
+    font-size: 16px;
+    display: block;
   }
   .introduction-content{
       width:46%;
@@ -84,8 +101,16 @@
 }
 
 @media (max-width:599px){
-  .name{
-    font-size:24px;
+  .profile{
+    font-size:20px;
+  }
+  .copyto{
+    font-size: 10px;
+    display: block;
+  }
+  .button{
+    font-size: 8px;
+    margin-top: 5px;
   }
   .introduction-content{
       width:90%;

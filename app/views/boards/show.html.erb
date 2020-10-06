@@ -1,7 +1,13 @@
 <%= render 'shared/header'%>
 <div class="wrapper">
-    <div class="name">
+    <div class="profile">
       <%= @user.nickname %>さんってどんなひと？
+      <% if @user==current_user%>
+        <span class="copyto">
+          マイボードURL  https://taqoo.herokuapp.com/boards/<%=@user.id%>
+          <button id="copy-url" class="button">Copy URL</button>
+        </span>
+      <% end%>
     </div>
      <%count=0%>
       <% if @new_introductions.empty?%>
