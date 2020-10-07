@@ -55,7 +55,8 @@ class IntroductionsController < ApplicationController
   end
 
   def back_not_current_user
-    unless current_user.id == params[:id]
+    board=Board.where(id: @introduction.boards_id)
+    unless current_user.id == board[0][:users_id]
       redirect_to root_path
     end
   end
