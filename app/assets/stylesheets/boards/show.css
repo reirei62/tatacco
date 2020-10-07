@@ -80,6 +80,11 @@
   .under-line{
     border-bottom:2px dashed #fc848c;
   }
+  .name-link{
+    text-decoration: none;
+    color:#333333;
+    font-weight: bold;
+  }
 
 @media (max-width:1024px){
   .profile{

@@ -35,7 +35,9 @@
             <span class="under-line">紹介者
               <%= intro.category.name%>の
               <% user=User.find(intro.users_id)%>
-              <%=user.nickname%>
+              <%= link_to board_path(id: intro.users_id),class:'name-link' do%>
+                <%=user.nickname%>
+              <% end%>
             </span>
           </div>
         </div>
@@ -51,7 +53,9 @@
             <span class="under-line">紹介者
               <%= intro.category.name%>の
               <% user=User.find(intro.users_id)%>
-              <%=user.nickname%>
+              <%= link_to board_path(id: intro.users_id),class:'name-link' do%>
+                <%=user.nickname%>
+              <% end%>
             </span>
           </div>
         </div>
@@ -73,7 +77,9 @@
             <span class="under-line">紹介者
               <%= intro.category.name%>
               <% user=User.find(intro.users_id)%>
-              <%=user.nickname%>
+              <%= link_to board_path(id: intro.users_id),class:'name-link' do%>
+                <%=user.nickname%>
+              <% end%>
             </span>
           </div>
         </div>
