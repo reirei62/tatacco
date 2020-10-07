@@ -5,6 +5,7 @@ class BoardsController < ApplicationController
 
 
   def create
+    authenticate_user!
     @board=Board.new(users_id: current_user.id )
     if @board.save
       redirect_to board_path(id: @board.users_id)
@@ -20,5 +21,4 @@ class BoardsController < ApplicationController
     @new_introductions=Introduction.where(boards_id: @board[0][:id],permission: false)
   end
 
- 
 end
