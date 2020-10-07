@@ -48,7 +48,8 @@ class IntroductionsController < ApplicationController
   end
   
   def back_defferent_person
-    unless current_user.id == params[:id] || @introduction.users_id == current_user.id
+    check=current_user.id
+    unless check == params[:id].to_i || check == @introduction.users_id
       redirect_to root_path
     end
   end
