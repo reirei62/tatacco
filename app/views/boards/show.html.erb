@@ -68,7 +68,7 @@
         <div class="introduction-content">
           <%= intro.content%>
           <!--紹介文を作成した本人のみに削除の表示-->
-          <% if @introductions[count][:users_id] == current_user.id%>
+          <% if intro.users_id == current_user.id%>
               <%= link_to board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' do%>
                 <i class="fas fa-trash-alt">削除</i>
               <% end%>
