@@ -4,7 +4,7 @@
 
 [![Image from Gyazo](https://i.gyazo.com/3f802e8c3f6e2979c1b50b2a31613177.gif)](https://gyazo.com/3f802e8c3f6e2979c1b50b2a31613177)
 
-## 開発環境
+## :file_folder:開発環境
 <ul>
  <li>Ruby on Rails</li>
  <li>JavaScript</li>
@@ -48,11 +48,6 @@
     ここで公開を押せば他の人からも見えるようになり、削除を押すと紹介文は削除される
  
  4. ログアウトしログインしていない状態で先ほどのTwitterプロフィールにあるリンクに飛ぶと紹介文が追加されているのを確認できる
- 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 
 
 # テーブル設計
