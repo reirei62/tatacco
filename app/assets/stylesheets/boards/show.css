@@ -66,6 +66,7 @@
     border:1px solid #333333;
     padding:2px 2px 2px 5px;
     width:16%;
+    height:28px;
   }
   .red{
     background-color: red;
@@ -101,7 +102,7 @@
 
   .permission-button{
     font-size: 13px;
-   
+    height:24px;
   }
 }
 
@@ -122,6 +123,7 @@
   }
   .permission-button{
     font-size: 14px;
-    width: 22px;
+    width: 23px;
+    height:50px;
   }
 }
