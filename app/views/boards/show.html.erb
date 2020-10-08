@@ -76,11 +76,13 @@
         <div class="introduction-content">
           <%= intro.content%>
           <!--紹介文を作成した本人のみに削除の表示-->
-          <% if intro.users_id == current_user.id%>
-              <%= link_to board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' do%>
-                <i class="fas fa-trash-alt">削除</i>
+          <% if user_signed_in? %>
+              <% if intro.users_id == current_user.id%>
+                  <%= link_to board_introduction_path(@introductions[count][:id]), method: :delete, class:'permission-button red' do%>
+                    <i class="fas fa-trash-alt">削除</i>
+                  <% end%>
               <% end%>
-          <% end%>
+          <% end %>
           <div class="introducer-name">
             <span class="under-line">紹介者
               <%= intro.category.name%>
