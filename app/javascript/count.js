@@ -4,7 +4,7 @@ function count(){
   const text = document.getElementById("intro-text");
   const count = document.getElementById("count");
   
-  text.addEventListener("keyup", (e)=>{
+  text.addEventListener("input", (e)=>{
     const value = text.value;
     const counter=value.length;
     if (counter>100){
